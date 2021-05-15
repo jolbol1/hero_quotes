@@ -17,8 +17,26 @@ for(let hero in quotes) {
     let quoteIndex = getRandNum(quotes[hero].length);
     selectedQuotes.push(`"${quotes[hero][quoteIndex]}" - ${capatalise(hero)}`);
 }
+
+//I made the Ascii Art here an objext as I had trouble presenting it legibly without doing so.
+const ascii = () => {
+
+    let asciiArt = {
+        1:"  __ ___   _____ _ __   __ _  ___ _ __ ___ ",
+        2:" / _` \\ \\ / / _ \\ '_ \\ / _` |/ _ \\ '__/ __|",
+        3:"| (_| |\\ V /  __/ | | | (_| |  __/ |  \\__ \\ ",
+        4:" \__,_|  \\_/ \\___|_| |_|\\__, |\\___|_|  |___/",
+        5:"                        __/ |              ",
+        6:"                       |___/               "
+    }
+    for(let line in asciiArt) {
+        console.log(asciiArt[line]);
+    }
+}
+
 //Fucntion to allow a easy clean output ot the terminal.
 function outputMessage(selectedQuotes) {
+    ascii();
     console.log(`Welcome Stranger!`)
     console.log('The Avengers have some advice for you');
     console.log('---------------------------------------')
