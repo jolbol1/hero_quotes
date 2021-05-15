@@ -1,4 +1,4 @@
-# Hero Widsom
+# Hero Quotes
 > A JavaScript terminal program that will show the user a random quote from a random hero.
 > I have selected the quotes and hero's.
 
