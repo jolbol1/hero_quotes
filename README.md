@@ -1,6 +1,6 @@
-# Movie Quotes
-> A JavaScript terminal program that will show the user a random quote from a random movie.
-> I have selected the quotes and movies.
+# Hero Widsom
+> A JavaScript terminal program that will show the user a random quote from a random hero.
+> I have selected the quotes and hero's.
 
 ## Usage
 Run this project with node
