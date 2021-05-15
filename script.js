@@ -1,4 +1,8 @@
-// The start of the file. Ready for VC
+// The start of the file.
+
+//Get Random Number between 0 and number given in parameter (-1)
+const getRandNum = number => Math.floor(Math.random() * number);
+
 
 // Set up an object where each key is a charachter and each value and array of  5 of their quotes
 const quotes = {
@@ -6,3 +10,14 @@ const quotes = {
     spiderman: ['Your friendly neighborhood Spider-Man!', 'Who am I? I\'m Spider-Man!', "I will never forget these words: 'With great power, comes great responsibility.'", 'What we believe we know may not be the truth.', 'You have a metal arm? Dude, that is so awesome!'],
     ironman: ['I am Iron Man.', 'Genius, billionaire, playboy, philanthropist.', 'We have a Hulk.', 'Sometimes you gotta run before you can walk.', 'Doth mother know you weareth her drapes.']
 }
+
+//Create an empty array to store a quote from each superhero.
+let selectedQuotes = [];
+
+for(let hero in quotes) {
+    let quoteIndex = getRandNum(quotes[hero].length);
+    selectedQuotes.push(`"${quotes[hero][quoteIndex]}" - ${hero}`);
+}
+
+console.log(selectedQuotes);
+
