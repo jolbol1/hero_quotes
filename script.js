@@ -12,10 +12,16 @@ const quotes = {
 }
 //Create an empty array to store a quote from each superhero.
 let selectedQuotes = [];
+// I added this to make the quotes all line up. 'Spiderman Said' being 14 characters, so the rest should pad to that.
+const paddingAmount = 14;
 // Run through all the heros and grab a random quote from each.
 for(let hero in quotes) {
     let quoteIndex = getRandNum(quotes[hero].length);
-    selectedQuotes.push(`"${quotes[hero][quoteIndex]}" - ${capatalise(hero)}`);
+    const sentenceStart = `${capatalise(hero)} said`
+    const quote = quotes[hero][quoteIndex];
+    const paddingNeeded = paddingAmount - sentenceStart.length
+    const padding = (paddingNeeded !== 0) ? (' ').repeat(paddingNeeded) : '';
+    selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
 }
 
 //I made the Ascii Art here an objext as I had trouble presenting it legibly without doing so.
