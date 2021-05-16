@@ -1,5 +1,3 @@
-// The start of the file.
-
 //Get Random Number between 0 and number given in parameter (-1)
 const getRandNum = number => Math.floor(Math.random() * number);
 //Capatalise the first letter of the given string. This allows us to use the key and look nice.
