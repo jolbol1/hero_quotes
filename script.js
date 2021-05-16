@@ -46,7 +46,7 @@ function outputMessage(selectedQuotes) {
     console.log('---------------------------------------')
     console.log(selectedQuotes.join('\n'))
     console.log('---------------------------------------')
-    console.log('End of Avengers Wisdom')
+    console.log('End of Avengers Wisdom. Have a heroic day!')
 }
 
 outputMessage(selectedQuotes);
