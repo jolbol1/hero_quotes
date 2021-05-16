@@ -22,7 +22,7 @@ for(let hero in quotes) {
     selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
 }
 
-/* I made the Ascii Art here an objext as I had trouble presenting it legibly without doing so.
+/* I made the Ascii Art here an object as I had trouble presenting it legibly without doing so.
    Later I discovered that it was due to having to escape backticks and backslashes used in the art. This allowed me to simplify it to the ascii string below.
 const ascii = () => {
 
