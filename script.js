@@ -22,7 +22,8 @@ for(let hero in quotes) {
     selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
 }
 
-//I made the Ascii Art here an objext as I had trouble presenting it legibly without doing so.
+/* I made the Ascii Art here an objext as I had trouble presenting it legibly without doing so.
+   Later I discovered that it was due to having to escape backticks and backslashes used in the art. This allowed me to simplify it to the ascii string below.
 const ascii = () => {
 
     let asciiArt = {
@@ -37,10 +38,20 @@ const ascii = () => {
         console.log(asciiArt[line]);
     }
 }
+*/
+
+const ascii = `
+    __ ___   _____ _ __   __ _  ___ _ __ ___ 
+   / _\` \\ \\ / / _ \\ '_ \\ / _\` |/ _ \\ '__/ __|
+  | (_| |\\ V /  __/ | | | (_| |  __/ |  \\__ \\
+   \\__,_| \\_/ \\___|_| |_|\\__, |\\___|_|  |___/
+                          __/ |              
+                         |___/               
+`
 
 //Fucntion to allow a easy clean output ot the terminal.
 function outputMessage(selectedQuotes) {
-    ascii();
+    console.log(ascii);
     console.log(`Welcome Stranger!`)
     console.log('The Avengers have some advice for you');
     console.log('---------------------------------------')
