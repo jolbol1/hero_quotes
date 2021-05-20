@@ -1,0 +1,45 @@
+body {
+    font-family: Roboto;
+    background-image: url("https://wallpapercave.com/wp/wp5511233.jpg");
+}
+
+main {
+    background-color: rgba(98, 110, 218, 0.75);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+.title {
+    font-size: 100px;
+    text-decoration: underline;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quotes {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+button {
+    border: 1px outset red;
+    background-color: red;
+    font-size: 150%;
+    color: white;
+    cursor:pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+}
