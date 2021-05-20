@@ -7,11 +7,18 @@ Run this project with node
 
 `node script.js`
 
+Or download the files and open up the index.html for a web interface.
+
 ## Project
 This is my first portfolio project for the Codecademy Full Stack Engnieer Carrer Path course.
+
+The prompt is shown below.
 
 ## Prompt
 For this project, you will build a message generator program. Every time a user runs a program, they should get a new, randomized output. You’re welcome to take the project in a couple of different forms, like an astrology generator, inspirational message, or nonsensical jokes. To make your program truly random, the message that it outputs should be made up of at least three different pieces of data. Take what you know of JavaScript syntax so far to build the program and customize it to your liking.
 
 ## Improvements
-This project was rather simple. To improve this I would find an API which could pull a far larger list of quotes from a database. This could include options for the movie name and timestamps. Further I would add a web interface with some personalisation options.
+While the project required only a terminal application, I have later revisted this after the basic html and css course to add a very simple web interface.
+
+## Future
+This project was rather simple. To improve this I would find an API which could pull a far larger list of quotes from a database. This could include options for the movie name and timestamps. Further, I would make the website look better and the reload button reload the script only, not the whole page.
