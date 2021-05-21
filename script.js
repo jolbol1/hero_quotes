@@ -8,6 +8,7 @@ const quotes = {
     spiderman: ['Your friendly neighborhood Spider-Man!', 'Who am I? I\'m Spider-Man!', "I will never forget these words: 'With great power, comes great responsibility.'", 'What we believe we know may not be the truth.', 'You have a metal arm? Dude, that is so awesome!'],
     ironman: ['I am Iron Man.', 'Genius, billionaire, playboy, philanthropist.', 'We have a Hulk.', 'Sometimes you gotta run before you can walk.', 'Doth mother know you weareth her drapes.']
 }
+
 //Create an empty array to store a quote from each superhero.
 let selectedQuotes = [];
 // I added this to make the quotes all line up. 'Spiderman Said' being 14 characters, so the rest should pad to that.
@@ -22,43 +23,15 @@ for(let hero in quotes) {
     selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
 }
 
-/* I made the Ascii Art here an object as I had trouble presenting it legibly without doing so.
-   Later I discovered that it was due to having to escape backticks and backslashes used in the art. This allowed me to simplify it to the ascii string below.
-const ascii = () => {
-
-    let asciiArt = {
-        1:"  __ ___   _____ _ __   __ _  ___ _ __ ___ ",
-        2:" / _` \\ \\ / / _ \\ '_ \\ / _` |/ _ \\ '__/ __|",
-        3:"| (_| |\\ V /  __/ | | | (_| |  __/ |  \\__ \\ ",
-        4:" \__,_|  \\_/ \\___|_| |_|\\__, |\\___|_|  |___/",
-        5:"                        __/ |              ",
-        6:"                       |___/               "
-    }
-    for(let line in asciiArt) {
-        console.log(asciiArt[line]);
-    }
-}
-*/
-
-const ascii = `
-    __ ___   _____ _ __   __ _  ___ _ __ ___ 
-   / _\` \\ \\ / / _ \\ '_ \\ / _\` |/ _ \\ '__/ __|
-  | (_| |\\ V /  __/ | | | (_| |  __/ |  \\__ \\
-   \\__,_| \\_/ \\___|_| |_|\\__, |\\___|_|  |___/
-                          __/ |              
-                         |___/               
-`
 
 //Fucntion to allow a easy clean output ot the terminal.
 function outputMessage(selectedQuotes) {
-    console.log(ascii);
-    console.log(`Welcome Stranger!`)
-    console.log('The Avengers have some advice for you');
-    console.log('---------------------------------------')
-    console.log(selectedQuotes.join('\n'))
-    console.log('---------------------------------------')
-    console.log('End of Avengers Wisdom. Have a heroic day!')
+    document.write("<p class='quotes' id='hero1'>" + selectedQuotes[0] + "</p>")
+    document.write("<p class='quotes' id='hero2'>" + selectedQuotes[1] + "</p>")
+    document.write("<p class='quotes' id='hero3'>" + selectedQuotes[2] + "</p>")
+
 }
+
 
 outputMessage(selectedQuotes);
 
