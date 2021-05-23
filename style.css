@@ -63,7 +63,7 @@ button:active {
 
 .title {
     display: inline-block;
-    font-size: 100px;
+    font-size: 5em;
     text-decoration: underline;
     font-family: 'Avenger';
     margin-top: 3%;
@@ -97,7 +97,8 @@ button:active {
     vertical-align: middle;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position-x: 70%;
+    background-position-x: 70%, center;
+
 }
 
 
