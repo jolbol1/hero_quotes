@@ -1,16 +1,14 @@
+/* Change the entire box model to border-box */
 * {
     box-sizing: border-box;
 }
-
+/*Add the avengers font */
 @font-face {
     font-family: 'Avenger';
     src: url('./AVENGEANCE\ HEROIC\ AVENGER.ttf') format('truetype');
 }
 
-body {
-    font-family: Roboto;
-    background-image: url("https://wallpapercave.com/wp/wp5511233.jpg");
-}
+/* Element selectors */
 
 main {
     background-color: rgba(98, 110, 218, 0.75);
@@ -22,15 +20,9 @@ main {
     overflow: hidden;
 }
 
-
-.title {
-    display: inline-block;
-    font-size: 100px;
-    text-decoration: underline;
-    font-family: 'Avenger';
-    margin-top: 3%;
-    margin-bottom: 0%;
-    padding-top: 1%;
+body {
+    font-family: Roboto;
+    background-image: url("https://wallpapercave.com/wp/wp5511233.jpg");
 }
 
 img {
@@ -40,11 +32,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.quotes {
-    font-size: 200%;
-    font-weight: bold;
 }
 
 button {
@@ -71,6 +58,27 @@ button:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
+/* Class Selectors */
+
+.title {
+    display: inline-block;
+    font-size: 100px;
+    text-decoration: underline;
+    font-family: 'Avenger';
+    margin-top: 3%;
+    margin-bottom: 0%;
+    padding-top: 1%;
+}
+
+
+
+.quotes {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+
 
 .hero-block {
     margin: 10px 0px;
@@ -105,6 +113,8 @@ button:active {
     font-style: italic;
     font-weight: bold;
 }
+
+/* ID Selectors */
 
 #thor div.hero-name {
     background-image: url(https://emoji.gg/assets/emoji/happythor.png);
