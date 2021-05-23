@@ -1,7 +1,6 @@
 //Set the refresh button to a variable.
 let refreshButton = document.getElementById('new-wisdom');
 let wisdomBlock = document.getElementById('wisdom-block');
-
 //Get Random Number between 0 and number given in parameter (-1)
 const getRandNum = number => Math.floor(Math.random() * number);
 //Capatalise the first letter of the given string. This allows us to use the key and look nice.
@@ -22,7 +21,6 @@ const quotes = {
             if(typeof this[hero] === 'function') {
                 continue;
             }
-            console.log(hero);
             randomHeroQuotes[hero] = this.getRandomHeroQuote(hero);
         }
         return randomHeroQuotes;
@@ -32,6 +30,7 @@ const quotes = {
 
 //This function generates the Div's required to display the quotes in HTML format. I did it this way as it can be easily expanded by just adding more heros to the object.
 function displayQuotes() {
+    wisdomBlock.innerHTML = 'Generating Wisdom';
     let selectedQuotes = quotes.getRandomQuotes();
     for(let hero in selectedQuotes) {
         // Create the block for the quote and hero name
@@ -56,16 +55,10 @@ function displayQuotes() {
     }
 }
 // Add the event listener for on click of the quotes.
-refreshButton.onclick = function() {
-    wisdomBlock.innerHTML = '';
-    displayQuotes;
-
-}
+refreshButton.onclick = displayQuotes;
 // Make sure there is wi
 displayQuotes();
-console.log(quotes.getRandomHeroQuote('thor'))
-console.log(quotes.getRandomQuotes());
-console.log(quotes.length)
+
 
 
 
