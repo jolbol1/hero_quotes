@@ -32,7 +32,6 @@ const quotes = {
 
 //This function generates the Div's required to display the quotes in HTML format. I did it this way as it can be easily expanded by just adding more heros to the object.
 function displayQuotes() {
-    wisdomBlock.innerHTML = '';
     let selectedQuotes = quotes.getRandomQuotes();
     for(let hero in selectedQuotes) {
         // Create the block for the quote and hero name
@@ -57,7 +56,11 @@ function displayQuotes() {
     }
 }
 // Add the event listener for on click of the quotes.
-refreshButton.onclick = displayQuotes;
+refreshButton.onclick = function() {
+    wisdomBlock.innerHTML = '';
+    displayQuotes;
+
+}
 // Make sure there is wi
 displayQuotes();
 console.log(quotes.getRandomHeroQuote('thor'))
