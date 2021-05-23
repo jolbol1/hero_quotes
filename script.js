@@ -1,3 +1,5 @@
+//Set the refresh button to a variable.
+let refreshButton = document.getElementById('new-wisdom');
 //Get Random Number between 0 and number given in parameter (-1)
 const getRandNum = number => Math.floor(Math.random() * number);
 //Capatalise the first letter of the given string. This allows us to use the key and look nice.
@@ -8,30 +10,32 @@ const quotes = {
     spiderman: ['Your friendly neighborhood Spider-Man!', 'Who am I? I\'m Spider-Man!', "I will never forget these words: 'With great power, comes great responsibility.'", 'What we believe we know may not be the truth.', 'You have a metal arm? Dude, that is so awesome!'],
     ironman: ['I am Iron Man.', 'Genius, billionaire, playboy, philanthropist.', 'We have a Hulk.', 'Sometimes you gotta run before you can walk.', 'Doth mother know you weareth her drapes.']
 }
-
-//Create an empty array to store a quote from each superhero.
-let selectedQuotes = [];
-// I added this to make the quotes all line up. 'Spiderman Said' being 14 characters, so the rest should pad to that.
-const paddingAmount = 14;
-// Run through all the heros and grab a random quote from each.
-for(let hero in quotes) {
-    let quoteIndex = getRandNum(quotes[hero].length);
-    const sentenceStart = `${capatalise(hero)} said`
-    const quote = quotes[hero][quoteIndex];
-    const paddingNeeded = paddingAmount - sentenceStart.length
-    const padding = (paddingNeeded !== 0) ? (' ').repeat(paddingNeeded) : '';
-    selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
+let paddingAmount = 14;
+// Run through all the heros and grab a random quote from each. Returns an array with a random quote from each hero.
+function getRandomQuotes() {
+    let selectedQuotes = [];
+    for(let hero in quotes) {
+        let quoteIndex = getRandNum(quotes[hero].length);
+        const sentenceStart = `${capatalise(hero)} said`
+        const quote = quotes[hero][quoteIndex];
+        const paddingNeeded = paddingAmount - sentenceStart.length
+        const padding = (paddingNeeded !== 0) ? (' ').repeat(paddingNeeded) : '';
+        selectedQuotes.push(`${sentenceStart}${padding}| "${quote}"`);
+    }
+    return selectedQuotes;
 }
 
-
-//Fucntion to allow a easy clean output ot the terminal.
-function outputMessage(selectedQuotes) {
-    document.write("<p class='quotes' id='hero1'>" + selectedQuotes[0] + "</p>")
-    document.write("<p class='quotes' id='hero2'>" + selectedQuotes[1] + "</p>")
-    document.write("<p class='quotes' id='hero3'>" + selectedQuotes[2] + "</p>")
-
+//Display the quotes in the HTML. This grabs the random quote array from above.
+function displayQuotes() {
+    let selectedQuotes = getRandomQuotes();
+    document.getElementById('wisdom-one').innerHTML = "<p class='quotes' id='hero1'>" + selectedQuotes[0] + "</p>";
+    document.getElementById('wisdom-two').innerHTML = "<p class='quotes' id='hero2'>" + selectedQuotes[1] + "</p>";
+    document.getElementById('wisdom-three').innerHTML = "<p class='quotes' id='hero3'>" + selectedQuotes[2] + "</p>";
 }
+// Add the event listener for on click of the quotes.
+refreshButton.onclick = displayQuotes;
+// Make sure there is wi
+displayQuotes();
 
 
-outputMessage(selectedQuotes);
 
