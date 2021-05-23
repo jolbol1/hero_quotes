@@ -3,11 +3,13 @@
 > I have selected the quotes and hero's.
 
 ## Usage
+[Live Demo](https://jolbol1.github.io/hero_quotes/)
+
 Run this project with node
 
 `node script.js`
 
-Or download the files and open up the index.html for a web interface. A demo site can be found [here](https://jolbol1.github.io/hero_quotes/)
+Or download the files and open up the index.html for a web interface.
 
 ## Project
 This is my first portfolio project for the Codecademy Full Stack Engnieer Carrer Path course.
