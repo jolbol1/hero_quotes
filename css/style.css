@@ -150,9 +150,18 @@ footer li {
     font-family: 'Bebas Neue', cursive;
     font-size: 2em;
     vertical-align: middle;
-    direction: rtl;
 }
 
+@media screen and (max-width: 600px) {
+    .hero-name-block {
+      font-size: 1.5em;
+    }
+  }
+
+.hero-name-block p {
+    display: inline;
+
+}
 
 .hero-quote {
     right: auto;

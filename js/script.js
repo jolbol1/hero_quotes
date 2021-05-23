@@ -41,10 +41,12 @@ function displayQuotes() {
         // Create the block for the hero name. Includes a hacky way to show the faces next to the text by leaving it as a span and adding padding and images in css
         const heroNameDiv = document.createElement("div");
         heroNameDiv.setAttribute("class", "hero-name-block")
+        const paraName = document.createElement("p");
         const heroName = document.createTextNode(hero);
         const spanImage = document.createElement("span");
         heroNameDiv.appendChild(spanImage);
-        heroNameDiv.appendChild(heroName);
+        paraName.appendChild(heroName);
+        heroNameDiv.appendChild(paraName);
         // Create the block for the hero quote
         const heroQuoteDiv = document.createElement("div");
         const quoteText = document.createTextNode(selectedQuotes[hero]);
