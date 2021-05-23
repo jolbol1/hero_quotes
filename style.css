@@ -87,6 +87,9 @@ button:active {
     font-family: 'Bebas Neue', cursive;
     font-size: 2em;
     vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 70%;
 }
 
 
@@ -101,4 +104,18 @@ button:active {
     font-family: monospace;
     font-style: italic;
     font-weight: bold;
+}
+
+#thor div.hero-name {
+    background-image: url(https://emoji.gg/assets/emoji/happythor.png);
+}
+
+#spiderman div.hero-name {
+    background-image: url(https://emoji.gg/assets/emoji/4706-smilingspiderman.png);
+
+}
+
+#ironman div.hero-name {
+    background-image: url(https://emoji.gg/assets/emoji/6983_tonystark_facepalm.png);
+
 }
