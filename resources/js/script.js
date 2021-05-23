@@ -3,8 +3,6 @@ let refreshButton = document.getElementById('new-wisdom');
 let wisdomBlock = document.getElementById('wisdom-block');
 //Get Random Number between 0 and number given in parameter (-1)
 const getRandNum = number => Math.floor(Math.random() * number);
-//Capatalise the first letter of the given string. This allows us to use the key and look nice.
-const capatalise = word => word.charAt(0).toUpperCase() + word.slice(1);
 // Set up an object where each key is a charachter and each value and array of 5 of their quotes. Object also contains functions.
 const quotes = {
     // Any key put here will be taken as a hero, and any values taken as their quotes.
