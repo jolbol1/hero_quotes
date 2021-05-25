@@ -9,6 +9,7 @@ const quotes = {
     thor: ['I went for the head', 'We’re the same, you and I. Just a couple of hot-headed fools', 'Do I look to be in a gaming mood?', 'So, Earth has wizards now, huh?', 'Bring me Thanos!'],
     spiderman: ['Your friendly neighborhood Spider-Man!', 'Who am I? I\'m Spider-Man!', "I will never forget these words: 'With great power, comes great responsibility.'", 'What we believe we know may not be the truth.', 'You have a metal arm? Dude, that is so awesome!'],
     ironman: ['I am Iron Man.', 'Genius, billionaire, playboy, philanthropist.', 'We have a Hulk.', 'Sometimes you gotta run before you can walk.', 'Doth mother know you weareth her drapes.'],
+    captain_america: ['I’m just a kid from Brooklyn.', 'Language!', 'That is America’s ass.', 'I can do this all day.', 'I’m with you ’til the end of the line.'],
     //Get a random quote from the hero provided in the parameter. 'hero' must match the keys above.
     getRandomHeroQuote(hero) {
         let herosQuotes = this[hero];
@@ -40,8 +41,9 @@ function displayQuotes() {
         const heroNameDiv = document.createElement("div");
         heroNameDiv.setAttribute("class", "hero-name-block")
         const paraName = document.createElement("p");
-        const heroName = document.createTextNode(hero);
+        const heroName = document.createTextNode(hero.replace("_", " "));
         const spanImage = document.createElement("span");
+        spanImage.setAttribute("style", "background-image: url(./resources/img/emojis/" + hero + ".png)")
         heroNameDiv.appendChild(spanImage);
         paraName.appendChild(heroName);
         heroNameDiv.appendChild(paraName);

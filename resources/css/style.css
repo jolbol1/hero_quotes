@@ -174,23 +174,3 @@ footer li {
     font-style: italic;
     font-weight: bold;
 }
-
-
-
-
-/* ID Selectors */
-
-#thor span {
-    background-image: url(https://emoji.gg/assets/emoji/happythor.png);
-}
-
-#spiderman span {
-    background-image: url(https://emoji.gg/assets/emoji/4706-smilingspiderman.png);
-
-}
-
-#ironman span {
-    background-image: url(https://emoji.gg/assets/emoji/6983_tonystark_facepalm.png);
-
-}
-
